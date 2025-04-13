@@ -23,6 +23,9 @@ sub process {
 sub _init {
 	my $self = shift;
 
+	$self->{'struct'}->{'module_name'} = __PACKAGE__;
+	$self->{'struct'}->{'module_version'} = $VERSION;
+
 	$self->{'struct'}->{'stats'}->{'count'} = 0;
 
 	return;
