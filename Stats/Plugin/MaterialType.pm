@@ -17,9 +17,9 @@ sub name {
 }
 
 sub process {
-	my ($self, $record) = @_;
+	my ($self, $marc_record) = @_;
 
-	my $leader_string = $record->leader;
+	my $leader_string = $marc_record->leader;
 	my $leader = MARC::Leader->new(
 		'verbose' => $self->{'verbose'},
 	)->parse($leader_string);

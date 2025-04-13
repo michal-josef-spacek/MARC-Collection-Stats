@@ -13,7 +13,7 @@ sub name {
 }
 
 sub process {
-	my ($self, $record) = @_;
+	my ($self, $marc_record) = @_;
 
 	$self->{'struct'}->{'stats'}->{'count'}++;
 

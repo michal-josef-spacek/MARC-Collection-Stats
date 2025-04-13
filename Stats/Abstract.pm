@@ -56,7 +56,7 @@ sub name {
 
 # Process statistics.
 sub process {
-	my ($self, $record) = @_;
+	my ($self, $marc_record) = @_;
 
 	err __PACKAGE__.' is abstract class.';
 }

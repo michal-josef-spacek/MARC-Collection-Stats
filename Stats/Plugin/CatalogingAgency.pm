@@ -13,10 +13,10 @@ sub name {
 }
 
 sub process {
-	my ($self, $record) = @_;
+	my ($self, $marc_record) = @_;
 
 	my $original_cataloging_agency_key = 'not_040';
-	my $field_040 = $record->field('040');
+	my $field_040 = $marc_record->field('040');
 	if (defined $field_040) {
 		my $field_040a = $field_040->subfield('a');
 		if (defined $field_040a) {
