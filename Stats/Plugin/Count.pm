@@ -1,0 +1,33 @@
+package MARC::Collection::Stats::Plugin::Count;
+
+use base qw(MARC::Collection::Stats::Abstract);
+use strict;
+use warnings;
+
+our $VERSION = 0.01;
+
+sub name {
+	my $self = shift;
+
+	return 'count';
+}
+
+sub process {
+	my ($self, $record) = @_;
+
+	$self->{'struct'}->{'stats'}->{'count'}++;
+
+	return;
+}
+
+sub _init {
+	my $self = shift;
+
+	$self->{'struct'}->{'stats'}->{'count'} = 0;
+
+	return;
+}
+
+1;
+
+__END__
