@@ -17,10 +17,13 @@ META.yml
 README
 Stats.pm
 Stats/Abstract.pm
+Stats/Plugin/CatalogingAgency.pm
 Stats/Plugin/Count.pm
 t/MARC-Collection-Stats-Abstract/01-use.t
 t/MARC-Collection-Stats-Abstract/02-version.t
 t/MARC-Collection-Stats-Abstract/03-new.t
+t/MARC-Collection-Stats-Plugin-CatalogingAgency/01-use.t
+t/MARC-Collection-Stats-Plugin-CatalogingAgency/02-version.t
 t/MARC-Collection-Stats-Plugin-Count/01-use.t
 t/MARC-Collection-Stats-Plugin-Count/02-version.t
 t/MARC-Collection-Stats-Plugin-Count/03-new.t
@@ -31,5 +34,7 @@ xt/MARC-Collection-Stats-Abstract/01-pod_coverage.t
 xt/MARC-Collection-Stats-Abstract/02-pod.t
 xt/MARC-Collection-Stats-Count/01-pod_coverage.t
 xt/MARC-Collection-Stats-Count/02-pod.t
+xt/MARC-Collection-Stats-Plugin-CatalogingAgency/01-pod_coverage.t
+xt/MARC-Collection-Stats-Plugin-CatalogingAgency/02-pod.t
 xt/MARC-Collection-Stats/01-pod_coverage.t
 xt/MARC-Collection-Stats/02-pod.t
