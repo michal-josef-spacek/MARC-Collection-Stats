@@ -20,7 +20,9 @@ sub process {
 	my ($self, $record) = @_;
 
 	my $leader_string = $record->leader;
-	my $leader = MARC::Leader->new->parse($leader_string);
+	my $leader = MARC::Leader->new(
+		'verbose' => $self->{'verbose'},
+	)->parse($leader_string);
 	my $material_type = eval {
 		material_type($leader);
 	};

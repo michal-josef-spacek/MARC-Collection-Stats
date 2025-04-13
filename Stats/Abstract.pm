@@ -5,6 +5,7 @@ use warnings;
 
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
+use Mo::utils 0.06 qw(check_bool);
 
 our $VERSION = 0.01;
 
@@ -18,8 +19,14 @@ sub new {
 	# Structure.
 	$self->{'struct'} = {};
 
+	# Verbose mode.
+	$self->{'verbose'} = 0;
+
 	# Process parameters.
 	set_params($self, @params);
+
+	# Check 'verbose'.
+	check_bool($self, 'verbose');
 
 	# Initialize structure.
 	$self->init;
