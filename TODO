@@ -2,7 +2,9 @@ TODO
 ====
 1. Doc.
 2. Tests.
-3.
+3. Add check for MARC::Record in process(). And move abstract part to _process()
+method.
+4.
 
 Applied
 =======
