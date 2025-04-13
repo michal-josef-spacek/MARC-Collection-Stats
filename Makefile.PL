@@ -19,7 +19,10 @@ perl_version 5.006002;
 readme_from 'Stats.pm';
 recursive_author_tests('xt');
 requires 'Class::Utils' => 0.03;
+requires 'English' => 0;
 requires 'Error::Pure' => 0;
+requires 'MARC::Leader' => 0.04;
+requires 'MARC::Leader::Utils' => 0;
 requires 'Module::Pluggable' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/MARC-Collection-Stats/issues',
 resources 'homepage' => 'https://github.com/michal-josef-spacek/MARC-Collection-Stats';
