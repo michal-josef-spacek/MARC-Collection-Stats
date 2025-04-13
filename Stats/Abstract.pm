@@ -54,12 +54,17 @@ sub process {
 	err __PACKAGE__.' is abstract class.';
 }
 
+sub struct {
+	my $self = shift;
+
+	return $self->{'struct'};
+}
+
 sub _init {
 	my $self = shift;
 
 	err __PACKAGE__.' is abstract class.';
 }
-
 
 1;
 
