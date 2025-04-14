@@ -32,6 +32,9 @@ sub new {
 	# Check 'debug'.
 	check_bool($self, 'debug');
 
+	# Check 'struct'.
+	# TODO
+
 	# Check 'verbose'.
 	check_bool($self, 'verbose');
 
