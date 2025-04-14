@@ -16,6 +16,9 @@ sub new {
 	# Create object.
 	my $self = bless {}, $class;
 
+	# Debug mode.
+	$self->{'debug'} = 0;
+
 	# Structure.
 	$self->{'struct'} = {};
 
