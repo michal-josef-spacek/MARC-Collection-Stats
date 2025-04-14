@@ -26,10 +26,13 @@ requires:
   DateTime: 0
   English: 0
   Error::Pure: 0
+  List::Util: 1.33
+  MARC::Field008: 0
   MARC::Leader: 0.04
   MARC::Leader::Utils: 0
   Mo::utils: 0.06
   Module::Pluggable: 0
+  NKC::MARC::Cleanups: 0
   perl: 5.6.2
 resources:
   bugtracker: https://github.com/michal-josef-spacek/MARC-Collection-Stats/issues
