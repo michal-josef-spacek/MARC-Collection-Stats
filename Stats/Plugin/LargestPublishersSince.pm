@@ -1,4 +1,4 @@
-package MARC::Collection::Stats::Plugin::LargestPublishersSince2000;
+package MARC::Collection::Stats::Plugin::LargestPublishersSince;
 
 use base qw(MARC::Collection::Stats::Abstract);
 use strict;
@@ -41,7 +41,7 @@ sub new {
 sub name {
 	my $self = shift;
 
-	return 'largest_publishers_since_2000';
+	return 'largest_publishers_since';
 }
 
 sub process {

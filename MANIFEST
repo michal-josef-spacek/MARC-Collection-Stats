@@ -19,7 +19,7 @@ Stats.pm
 Stats/Abstract.pm
 Stats/Plugin/CatalogingAgency.pm
 Stats/Plugin/Count.pm
-Stats/Plugin/LargestPublishersSince2000.pm
+Stats/Plugin/LargestPublishersSince.pm
 Stats/Plugin/MaterialType.pm
 t/MARC-Collection-Stats-Abstract/01-use.t
 t/MARC-Collection-Stats-Abstract/02-version.t
@@ -31,8 +31,8 @@ t/MARC-Collection-Stats-Plugin-Count/01-use.t
 t/MARC-Collection-Stats-Plugin-Count/02-version.t
 t/MARC-Collection-Stats-Plugin-Count/03-new.t
 t/MARC-Collection-Stats-Plugin-Count/04-name.t
-t/MARC-Collection-Stats-Plugin-LargestPublishersSince2000/01-use.t
-t/MARC-Collection-Stats-Plugin-LargestPublishersSince2000/02-version.t
+t/MARC-Collection-Stats-Plugin-LargestPublishersSince/01-use.t
+t/MARC-Collection-Stats-Plugin-LargestPublishersSince/02-version.t
 t/MARC-Collection-Stats-Plugin-MaterialType/01-use.t
 t/MARC-Collection-Stats-Plugin-MaterialType/02-version.t
 t/MARC-Collection-Stats-Plugin-MaterialType/03-new.t
@@ -46,8 +46,8 @@ xt/MARC-Collection-Stats-Plugin-CatalogingAgency/01-pod_coverage.t
 xt/MARC-Collection-Stats-Plugin-CatalogingAgency/02-pod.t
 xt/MARC-Collection-Stats-Plugin-Count/01-pod_coverage.t
 xt/MARC-Collection-Stats-Plugin-Count/02-pod.t
-xt/MARC-Collection-Stats-Plugin-LargestPublishersSince2000/01-pod_coverage.t
-xt/MARC-Collection-Stats-Plugin-LargestPublishersSince2000/02-pod.t
+xt/MARC-Collection-Stats-Plugin-LargestPublishersSince/01-pod_coverage.t
+xt/MARC-Collection-Stats-Plugin-LargestPublishersSince/02-pod.t
 xt/MARC-Collection-Stats-Plugin-MaterialType/01-pod_coverage.t
 xt/MARC-Collection-Stats-Plugin-MaterialType/02-pod.t
 xt/MARC-Collection-Stats/01-pod_coverage.t
