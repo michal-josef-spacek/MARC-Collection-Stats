@@ -23,11 +23,14 @@ sub new {
 	my ($class, @params) = @_;
 
 	my ($object_params_ar, $other_params_ar) = split_params([
-		'largests_publishers_count'], @params);
+		'largests_publishers_count', 'year_from'], @params);
 	my $self = $class->SUPER::new(@{$other_params_ar});
 
 	# Count of largest publishers.
 	$self->{'largests_publishers_count'} = 10;
+
+	# Year from.
+	$self->{'year_from'} = 2000;
 
 	# Process parameters.
 	set_params($self, @{$object_params_ar});
@@ -74,8 +77,8 @@ sub process {
 		} else {
 			if ($field_008->date1 =~ m/[u|\#]/ms) {
 				push @keys, 'not_comparable_008_date';
-			} elsif ($field_008->date1 < 2000) {
-				push @keys, 'not_since_2000';
+			} elsif ($field_008->date1 < $self->{'year_from'}) {
+				push @keys, 'not_since';
 			}
 		}
 	}
