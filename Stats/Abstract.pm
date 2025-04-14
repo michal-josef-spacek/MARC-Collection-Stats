@@ -32,9 +32,6 @@ sub new {
 	# Check 'verbose'.
 	check_bool($self, 'verbose');
 
-	# Initialize structure.
-	$self->init;
-
 	return $self;
 }
 
