@@ -59,6 +59,12 @@ sub name {
 	err __PACKAGE__.' is abstract class,';
 }
 
+sub postprocess {
+	my $self = shift;
+
+	return;
+}
+
 # Process statistics.
 sub process {
 	my ($self, $marc_record) = @_;
