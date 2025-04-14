@@ -132,6 +132,9 @@ sub _init {
 	$self->{'struct'}->{'module_name'} = __PACKAGE__;
 	$self->{'struct'}->{'module_version'} = $VERSION;
 
+	$self->{'struct'}->{'parameters'}->{'year_from'} = $self->{'year_from'};
+	$self->{'struct'}->{'parameters'}->{'largests_publishers_count'} = $self->{'largests_publishers_count'};
+
 	$self->{'struct'}->{'stats'}->{'largest_publishers'} = {};
 	$self->{'struct'}->{'stats'}->{'helper'} = {};
 
