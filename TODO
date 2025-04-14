@@ -4,7 +4,8 @@ TODO
 2. Tests.
 3. Add check for MARC::Record in process(). And move abstract part to _process()
 method.
-4.
+4. Add list of methods to override to Abstract class.
+5.
 
 Applied
 =======
