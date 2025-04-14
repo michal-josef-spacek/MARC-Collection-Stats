@@ -75,7 +75,7 @@ sub process {
 			}
 			push @keys, 'not_valid_008';
 		} else {
-			if ($field_008->date1 =~ m/[u|\#]/ms) {
+			if ($field_008->date1 =~ m/[u\|\ ]/ms) {
 				push @keys, 'not_comparable_008_date';
 			} elsif ($field_008->date1 < $self->{'year_from'}) {
 				push @keys, 'not_since';
