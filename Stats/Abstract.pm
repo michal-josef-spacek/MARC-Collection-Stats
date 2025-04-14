@@ -29,6 +29,9 @@ sub new {
 	# Process parameters.
 	set_params($self, @params);
 
+	# Check 'debug'.
+	check_bool($self, 'debug');
+
 	# Check 'verbose'.
 	check_bool($self, 'verbose');
 
