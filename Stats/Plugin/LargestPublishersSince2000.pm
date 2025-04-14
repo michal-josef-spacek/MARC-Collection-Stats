@@ -12,6 +12,10 @@ use MARC::Field008;
 use MARC::Leader 0.04;
 use MARC::Leader::Utils qw(material_type);
 use NKC::MARC::Cleanups qw(clean_publisher_name);
+use Readonly;
+
+Readonly::Array our @NOT_PUBLISHERS => qw(not_comparable_008_date not_book
+	not_material not_since not_valid_008);
 
 our $VERSION = 0.01;
 
@@ -87,7 +91,7 @@ sub process {
 	}
 
 	foreach my $key (@keys) {
-		if (any { $key eq $_ } qw(not_book not_material not_since_2000)) {
+		if (any { $key eq $_ } @NOT_PUBLISHERS) {
 			$self->{'struct'}->{'stats'}->{'largest_publishers'}->{$key}++;
 		} else {
 			$self->{'struct'}->{'stats'}->{'helper'}->{$key}++;

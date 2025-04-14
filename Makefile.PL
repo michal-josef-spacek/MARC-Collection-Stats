@@ -29,6 +29,7 @@ requires 'MARC::Leader::Utils' => 0;
 requires 'Mo::utils' => 0.06;
 requires 'Module::Pluggable' => 0;
 requires 'NKC::MARC::Cleanups' => 0;
+requires 'Readonly' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/MARC-Collection-Stats/issues',
 resources 'homepage' => 'https://github.com/michal-josef-spacek/MARC-Collection-Stats';
 resources 'repository' => 'git://github.com/michal-josef-spacek/MARC-Collection-Stats';
