@@ -28,6 +28,7 @@ t/MARC-Collection-Stats-Abstract/03-new.t
 t/MARC-Collection-Stats-Plugin-CatalogingAgency/01-use.t
 t/MARC-Collection-Stats-Plugin-CatalogingAgency/02-version.t
 t/MARC-Collection-Stats-Plugin-CatalogingAgency/03-new.t
+t/MARC-Collection-Stats-Plugin-CatalogingAgency/04-name.t
 t/MARC-Collection-Stats-Plugin-Count/01-use.t
 t/MARC-Collection-Stats-Plugin-Count/02-version.t
 t/MARC-Collection-Stats-Plugin-Count/03-new.t
@@ -35,6 +36,7 @@ t/MARC-Collection-Stats-Plugin-Count/04-name.t
 t/MARC-Collection-Stats-Plugin-LargestPublishersSince/01-use.t
 t/MARC-Collection-Stats-Plugin-LargestPublishersSince/02-version.t
 t/MARC-Collection-Stats-Plugin-LargestPublishersSince/03-new.t
+t/MARC-Collection-Stats-Plugin-LargestPublishersSince/04-name.t
 t/MARC-Collection-Stats-Plugin-MaterialType/01-use.t
 t/MARC-Collection-Stats-Plugin-MaterialType/02-version.t
 t/MARC-Collection-Stats-Plugin-MaterialType/03-new.t
