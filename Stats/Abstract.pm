@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use Class::Utils qw(set_params);
+use DateTime;
 use Error::Pure qw(err);
 use Mo::utils 0.06 qw(check_bool);
 
@@ -43,6 +44,7 @@ sub init {
 
 	# Common initialization.
 	$self->{'struct'}->{'name'} = $self->name;
+	$self->{'struct'}->{'datetime'} = DateTime->now->iso8601;
 
 	# Plugin initialization.
 	$self->_init;
