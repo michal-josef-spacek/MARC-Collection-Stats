@@ -6,7 +6,10 @@ TODO
 method.
 4. Add list of methods to override to Abstract class.
 5. NKC::MARC::Cleanups is related to CNB.
-6.
+6. Add plugin for multiplicity statisticts.
+   e.g. one field 260 means '260x1'++
+   e.g. two fields 260 means '260x2'++
+7.
 
 Applied
 =======
