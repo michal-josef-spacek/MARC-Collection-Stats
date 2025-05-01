@@ -82,7 +82,10 @@ sub process {
 				push @keys, 'field_260c_numbers_not_on_book';
 			} elsif ($field_260c =~ m/^\[\d+\?\]$/ms) {
 				push @keys, 'field_260c_numbers_not_on_book_probably';
-			} elsif ($field_260c =~ m/^c\d+$/ms || $field_260c =~ m/^$C\d+$/ms) {
+			} elsif ($field_260c =~ m/^c\d+$/ms
+				|| $field_260c =~ m/^$C\d+$/ms
+				|| $field_260c =~ m/^$C\s+\d+$/ms) {
+
 				push @keys, 'field_260c_numbers_copyright';
 			} elsif ($field_260c =~ m/^\d+\-\d+$/ms) {
 				push @keys, 'field_260c_numbers_range';
@@ -122,7 +125,10 @@ sub process {
 				push @keys, 'field_264c_numbers_not_on_book';
 			} elsif ($field_264c =~ m/^\[\d+\?\]$/ms) {
 				push @keys, 'field_264c_numbers_not_on_book_probably';
-			} elsif ($field_264c =~ m/^c\d+$/ms || $field_264c =~ m/^$C\d+$/ms) {
+			} elsif ($field_264c =~ m/^c\d+$/ms
+				|| $field_264c =~ m/^$C\d+$/ms
+				|| $field_264c =~ m/^$C\s+\d+$/ms) {
+
 				push @keys, 'field_264c_numbers_copyright';
 			} elsif ($field_264c =~ m/^\d+\-\d+$/ms) {
 				push @keys, 'field_264c_numbers_range';
