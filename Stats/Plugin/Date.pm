@@ -46,7 +46,7 @@ sub process {
 			push @keys, 'field_008_date1_blank';
 		} else {
 			if ($self->{'debug'}) {
-				$self->_print("CNB id '$cnb' has field 008 date1 = ".$field_008->date1.".");
+				$self->_print("CNB id '$cnb' has field 008 date1 = '".$field_008->date1."'.");
 			}
 			push @keys, 'field_008_date1_not_numbers';
 		}
