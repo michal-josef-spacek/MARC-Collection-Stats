@@ -40,7 +40,9 @@ sub process {
 		}
 		push @keys, 'not_valid_008';
 	} else {
-		if ($field_008->date1 =~ m/^\d+$/ms) {
+		if ($field_008->date1 eq '9999') {
+			push @keys, 'field_008_date1_9999';
+		} elsif ($field_008->date1 =~ m/^\d+$/ms) {
 			push @keys, 'field_008_date1_numbers';
 		} elsif ($field_008->date1 =~ m/^\d{3}u$/ms) {
 			push @keys, 'field_008_date1_NNNu';
@@ -59,7 +61,9 @@ sub process {
 			push @keys, 'field_008_date1_not_numbers';
 		}
 
-		if ($field_008->date2 =~ m/^\d+$/ms) {
+		if ($field_008->date2 eq '9999') {
+			push @keys, 'field_008_date2_9999';
+		} elsif ($field_008->date2 =~ m/^\d+$/ms) {
 			push @keys, 'field_008_date2_numbers';
 		} elsif ($field_008->date2 =~ m/^\d{3}u$/ms) {
 			push @keys, 'field_008_date2_NNNu';
