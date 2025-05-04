@@ -107,10 +107,16 @@ sub process {
 				push @keys, 'field_260c_numbers_range';
 			} elsif ($field_260c =~ m/^\[\d+\]\-\d+$/ms) {
 				push @keys, 'field_260c_numbers_range_from_not_on_book';
+			} elsif ($field_260c =~ m/^\[\d+\?\]\-\d+$/ms) {
+				push @keys, 'field_260c_numbers_range_from_not_on_book_probably';
 			} elsif ($field_260c =~ m/^\d+\-\[\d+\]$/ms) {
 				push @keys, 'field_260c_numbers_range_to_not_on_book';
 			} elsif ($field_260c =~ m/^\d+\-$/ms) {
 				push @keys, 'field_260c_numbers_range_from';
+			} elsif ($field_260c =~ m/^\[\d+\]\-$/ms) {
+				push @keys, 'field_260c_numbers_range_from_from_not_on_book';
+			} elsif ($field_260c =~ m/^\[\d+\?\]\-$/ms) {
+				push @keys, 'field_260c_numbers_range_from_from_not_on_book_probably';
 			} elsif ($field_260c =~ m/^\[\d+\-\d+\]$/ms) {
 				push @keys, 'field_260c_numbers_range_not_on_book';
 			} else {
@@ -150,10 +156,16 @@ sub process {
 				push @keys, 'field_264c_numbers_range';
 			} elsif ($field_264c =~ m/^\[\d+\]\-\d+$/ms) {
 				push @keys, 'field_264c_numbers_range_from_not_on_book';
+			} elsif ($field_264c =~ m/^\[\d+\?\]\-\d+$/ms) {
+				push @keys, 'field_264c_numbers_range_from_not_on_book_probably';
 			} elsif ($field_264c =~ m/^\d+\-\[\d+\]$/ms) {
 				push @keys, 'field_264c_numbers_range_to_not_on_book';
 			} elsif ($field_264c =~ m/^\d+\-$/ms) {
 				push @keys, 'field_264c_numbers_range_from';
+			} elsif ($field_264c =~ m/^\[\d+\]\-$/ms) {
+				push @keys, 'field_264c_numbers_range_from_from_not_on_book';
+			} elsif ($field_264c =~ m/^\[\d+\?\]\-$/ms) {
+				push @keys, 'field_264c_numbers_range_from_from_not_on_book_probably';
 			} elsif ($field_264c =~ m/^\[\d+\-\d+\]$/ms) {
 				push @keys, 'field_264c_numbers_range_not_on_book';
 			} else {
