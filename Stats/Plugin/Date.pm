@@ -54,11 +54,6 @@ sub process {
 			push @keys, 'field_008_date1_uuuu';
 		} elsif ($field_008->date1 =~ m/^\s+$/ms) {
 			push @keys, 'field_008_date1_blank';
-		} else {
-			if ($self->{'debug'}) {
-				$self->_print("CNB id '$cnb' has field 008 date1 = '".$field_008->date1."'.");
-			}
-			push @keys, 'field_008_date1_not_numbers';
 		}
 
 		if ($field_008->date2 eq '9999') {
@@ -75,11 +70,6 @@ sub process {
 			push @keys, 'field_008_date2_uuuu';
 		} elsif ($field_008->date2 =~ m/^\s+$/ms) {
 			push @keys, 'field_008_date2_blank';
-		} else {
-			if ($self->{'debug'}) {
-				$self->_print("CNB id '$cnb' has field 008 date2 = '".$field_008->date2."'.");
-			}
-			push @keys, 'field_008_date2_not_numbers';
 		}
 	}
 
