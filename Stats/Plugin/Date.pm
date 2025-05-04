@@ -42,6 +42,14 @@ sub process {
 	} else {
 		if ($field_008->date1 =~ m/^\d+$/ms) {
 			push @keys, 'field_008_date1_numbers';
+		} elsif ($field_008->date1 =~ m/^\d{3}u$/ms) {
+			push @keys, 'field_008_date1_NNNu';
+		} elsif ($field_008->date1 =~ m/^\d{2}uu$/ms) {
+			push @keys, 'field_008_date1_NNuu';
+		} elsif ($field_008->date1 =~ m/^\duuu$/ms) {
+			push @keys, 'field_008_date1_Nuuu';
+		} elsif ($field_008->date1 =~ m/^uuuu$/ms) {
+			push @keys, 'field_008_date1_uuuu';
 		} elsif ($field_008->date1 =~ m/^\s+$/ms) {
 			push @keys, 'field_008_date1_blank';
 		} else {
@@ -53,6 +61,14 @@ sub process {
 
 		if ($field_008->date2 =~ m/^\d+$/ms) {
 			push @keys, 'field_008_date2_numbers';
+		} elsif ($field_008->date2 =~ m/^\d{3}u$/ms) {
+			push @keys, 'field_008_date2_NNNu';
+		} elsif ($field_008->date2 =~ m/^\d{2}uu$/ms) {
+			push @keys, 'field_008_date2_NNuu';
+		} elsif ($field_008->date2 =~ m/^\duuu$/ms) {
+			push @keys, 'field_008_date2_Nuuu';
+		} elsif ($field_008->date2 =~ m/^uuuu$/ms) {
+			push @keys, 'field_008_date2_uuuu';
 		} elsif ($field_008->date2 =~ m/^\s+$/ms) {
 			push @keys, 'field_008_date2_blank';
 		} else {
