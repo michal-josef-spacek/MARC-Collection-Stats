@@ -5,6 +5,7 @@ use strict;
 use warnings;
 
 use English;
+use Error::Pure::Utils qw(clean);
 use Unicode::UTF8 qw(decode_utf8 encode_utf8);
 
 our $VERSION = 0.01;
@@ -39,6 +40,7 @@ sub process {
 			$self->_print("CNB id '$cnb' has not valid 008 field.");
 		}
 		push @keys, 'not_valid_008';
+		clean();
 	} else {
 		if ($field_008->date1 eq '9999') {
 			push @keys, 'field_008_date1_9999';

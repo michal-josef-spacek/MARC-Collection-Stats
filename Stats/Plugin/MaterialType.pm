@@ -5,6 +5,7 @@ use strict;
 use warnings;
 
 use English;
+use Error::Pure::Utils qw(clean);
 use MARC::Leader 0.04;
 use MARC::Leader::Utils qw(material_type);
 
@@ -28,6 +29,7 @@ sub process {
 	};
 	if ($EVAL_ERROR) {
 		$material_type = 'unsupported';
+		clean();
 	}
 	
 	$self->{'struct'}->{'stats'}->{'material_type'}->{$material_type}++;

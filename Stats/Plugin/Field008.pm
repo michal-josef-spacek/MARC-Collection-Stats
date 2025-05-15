@@ -5,6 +5,7 @@ use strict;
 use warnings;
 
 use English;
+use Error::Pure::Utils qw(clean);
 use MARC::Leader;
 use MARC::Field008;
 
@@ -40,6 +41,7 @@ sub process {
 			print "CNB id '$cnb' has not valid 008 field.\n";
 		}
 		push @keys, 'not_valid_008';
+		clean();
 	}
 
 	if (! @keys) {
