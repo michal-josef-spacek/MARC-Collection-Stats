@@ -31,7 +31,7 @@ sub process {
 	}
 
 	foreach my $lang (@langs) {
-		$self->{'struct'}->{'stats'}->{'languages'}->{$lang}++;
+		$self->{'struct'}->{'stats'}->{'languages_single'}->{$lang}++;
 	}
 
 	if (@langs > 1) {
@@ -48,7 +48,7 @@ sub _init {
 	$self->{'struct'}->{'module_name'} = __PACKAGE__;
 	$self->{'struct'}->{'module_version'} = $VERSION;
 
-	$self->{'struct'}->{'stats'}->{'languages'} = {};
+	$self->{'struct'}->{'stats'}->{'languages_single'} = {};
 	$self->{'struct'}->{'stats'}->{'languages_multi'} = {};
 
 	return;
