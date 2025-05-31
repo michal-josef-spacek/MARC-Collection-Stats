@@ -14,7 +14,7 @@ our $VERSION = 0.01;
 sub name {
 	my $self = shift;
 
-	return 'field008-music';
+	return 'field008_music';
 }
 
 sub process {
