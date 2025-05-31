@@ -20,7 +20,7 @@ sub name {
 sub process {
 	my ($self, $marc_record) = @_;
 
-	my @keys;
+	my $struct_hr = $self->{'struct'}->{'stats'}->{$self->name};
 
 	my $leader_string = $marc_record->leader;
 	my $leader = MARC::Leader->new(
@@ -40,17 +40,14 @@ sub process {
 		if ($self->{'debug'}) {
 			print "CNB id '$cnb' has not valid 008 field.\n";
 		}
-		push @keys, 'not_valid_008';
+		$self->{'struct'}->{'stats'}->{'not_valid_008'}++;
 		clean();
+	} else {
+		my $type_of_date = $field_008->type_of_date;
+		$struct_hr->{'type_of_date'}->{$type_of_date}++;
 	}
 
-	if (! @keys) {
-		push @keys, $field_008->type_of_date;
-	}
-
-	foreach my $key (@keys) {
-		$self->{'struct'}->{'stats'}->{'field_008_type_of_date'}->{$key}++;
-	}
+	$self->{'struct'}->{'stats'}->{$self->name} = $struct_hr;
 
 	return;
 }
@@ -61,7 +58,8 @@ sub _init {
 	$self->{'struct'}->{'module_name'} = __PACKAGE__;
 	$self->{'struct'}->{'module_version'} = $VERSION;
 
-	$self->{'struct'}->{'stats'}->{'field_008_type_of_date'} = {};
+	$self->{'struct'}->{'stats'}->{$self->name} = {};
+	$self->{'struct'}->{'stats'}->{$self->name}->{'type_of_date'} = {};
 
 	return;
 }
