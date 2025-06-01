@@ -8,7 +8,6 @@ method.
 6. Add plugin for multiplicity statisticts.
    e.g. one field 260 means '260x1'++
    e.g. two fields 260 means '260x2'++
-7. Move repeating code from Field008::Map to some Utils.
 8. Plugin for Field008 map
 9. Plugin for Field008 continuing resource
 10. Plugin for Field008 visual material
@@ -21,3 +20,6 @@ Applied
 5. NKC::MARC::Cleanups is related to CNB.
 Move to Plugin::NKC distribution.
 OK [20250504] skim
+
+7. Move repeating code from Field008::Map to some Utils.
+OK [20250601] skim

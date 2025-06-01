@@ -6,6 +6,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
+use MARC::Collection::Stats::Utils qw(process_more_characters);
 use MARC::Field008;
 use MARC::Leader;
 
@@ -48,25 +49,9 @@ sub process {
 		$struct_hr->{'government_publication'}->{$map->government_publication}++;
 		$struct_hr->{'index'}->{$map->index}++;
 		$struct_hr->{'projection'}->{$map->projection}++;
-
-		if ($map->relief eq '||||') {
-			$struct_hr->{'relief'}->{$map->relief}++;
-		} else {
-			my @relief = split m//ms, $map->relief;
-			foreach my $relief (@relief) {
-				$struct_hr->{'relief'}->{$relief}++;
-			}
-		}
-
-		if ($map->special_format_characteristics eq '||') {
-			$struct_hr->{'special_format_characteristics'}->{$map->special_format_characteristics}++;
-		} else {
-			my @special_format_characteristics = split m//ms, $map->special_format_characteristics;
-			foreach my $special_format_characteristics (@special_format_characteristics) {
-				$struct_hr->{'special_format_characteristics'}->{$special_format_characteristics}++;
-			}
-		}
-
+		process_more_characters($struct_hr, 'relief', $map->relief);
+		process_more_characters($struct_hr, 'special_format_characteristics',
+			$map->special_format_characteristics);
 		$struct_hr->{'type_of_cartographic_material'}->{$map->type_of_cartographic_material}++;
 	} else {
 		$self->{'struct'}->{'stats'}->{'not_map'}++;
