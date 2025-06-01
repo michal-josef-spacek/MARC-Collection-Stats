@@ -45,8 +45,12 @@ t/MARC-Collection-Stats-Plugin-Date/01-use.t
 t/MARC-Collection-Stats-Plugin-Date/02-version.t
 t/MARC-Collection-Stats-Plugin-Field008-Map/01-use.t
 t/MARC-Collection-Stats-Plugin-Field008-Map/02-version.t
+t/MARC-Collection-Stats-Plugin-Field008-Map/03-new.t
+t/MARC-Collection-Stats-Plugin-Field008-Map/04-name.t
 t/MARC-Collection-Stats-Plugin-Field008-Music/01-use.t
 t/MARC-Collection-Stats-Plugin-Field008-Music/02-version.t
+t/MARC-Collection-Stats-Plugin-Field008-Music/03-new.t
+t/MARC-Collection-Stats-Plugin-Field008-Music/04-name.t
 t/MARC-Collection-Stats-Plugin-Field008/01-use.t
 t/MARC-Collection-Stats-Plugin-Field008/02-version.t
 t/MARC-Collection-Stats-Plugin-Languages/01-use.t
