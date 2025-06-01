@@ -1,5 +1,7 @@
 Changes
 examples/example_plugin.pl
+examples/process_more_characters_different.pl
+examples/process_more_characters_pipe.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
@@ -27,6 +29,7 @@ Stats/Plugin/Field008/Music.pm
 Stats/Plugin/Languages.pm
 Stats/Plugin/MaterialType.pm
 Stats/Plugin/Multiplicity.pm
+Stats/Utils.pm
 t/MARC-Collection-Stats-Abstract/01-use.t
 t/MARC-Collection-Stats-Abstract/02-version.t
 t/MARC-Collection-Stats-Abstract/03-new.t
@@ -56,6 +59,9 @@ t/MARC-Collection-Stats-Plugin-Multiplicity/01-use.t
 t/MARC-Collection-Stats-Plugin-Multiplicity/02-version.t
 t/MARC-Collection-Stats-Plugin-Multiplicity/03-new.t
 t/MARC-Collection-Stats-Plugin-Multiplicity/04-name.t
+t/MARC-Collection-Stats-Utils/01-use.t
+t/MARC-Collection-Stats-Utils/02-version.t
+t/MARC-Collection-Stats-Utils/03-process_more_characters.t
 t/MARC-Collection-Stats/01-use.t
 t/MARC-Collection-Stats/02-version.t
 t/MARC-Collection-Stats/03-plugins.t
@@ -79,5 +85,7 @@ xt/MARC-Collection-Stats-Plugin-MaterialType/01-pod_coverage.t
 xt/MARC-Collection-Stats-Plugin-MaterialType/02-pod.t
 xt/MARC-Collection-Stats-Plugin-Multiplicity/01-pod_coverage.t
 xt/MARC-Collection-Stats-Plugin-Multiplicity/02-pod.t
+xt/MARC-Collection-Stats-Utils/01-pod_coverage.t
+xt/MARC-Collection-Stats-Utils/02-pod.t
 xt/MARC-Collection-Stats/01-pod_coverage.t
 xt/MARC-Collection-Stats/02-pod.t
